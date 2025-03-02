@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, TextInput, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import styles from "../styles/deposit"; // Importando os estilos
+import styles from "../styles/profile"; // Importando os estilos
 
 export default function DepositScreen() {
     const navigation = useNavigation();

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TouchableOpacity, TextInput, Alert } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
-import styles from "../styles/withdraw"; // Importando os estilos
+import styles from "../styles/profile"; // Importando os estilos
 
 export default function WithdrawScreen() {
   const navigation = useNavigation();

@@ -11,7 +11,7 @@ export default function HomeScreen() {
       <Text style={styles.title}>Bem-vindo ao CriptoWallet</Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("Profile")}
+onPress={() => navigation.navigate("Profile")}        
       >
         <Text style={styles.buttonText}>Ir para Perfil</Text>
       </TouchableOpacity>

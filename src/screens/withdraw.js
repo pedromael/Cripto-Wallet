@@ -17,10 +17,10 @@ export default function WithdrawScreen() {
     }
     Alert.alert(
       "Confirmação",
-      `Você deseja sacar ${amount} ${selectedCrypto} para o endereço:\n${walletAddress}?`,
+      `Você deseja transferir ${amount} ${selectedCrypto} para o endereço:\n${walletAddress}?`,
       [
         { text: "Cancelar", style: "cancel" },
-        { text: "Confirmar", onPress: () => alert("Saque realizado com sucesso!") },
+        { text: "Confirmar", onPress: () => alert("Transferencia realizado com sucesso!") },
       ]
     );
   };
@@ -28,7 +28,7 @@ export default function WithdrawScreen() {
   return (
     <View style={styles.container}>
       {/* Título */}
-      <Text style={styles.title}>Saque de Criptomoeda</Text>
+      <Text style={styles.title}>Transferencia de Criptomoeda</Text>
 
       {/* Seleção de Criptomoeda */}
       <View style={styles.cryptoSelector}>
@@ -59,7 +59,7 @@ export default function WithdrawScreen() {
         <Ionicons name="wallet-outline" size={24} color="#ffcc00" />
       </View>
 
-      {/* Valor do Saque */}
+      {/* Valor do Transferencia */}
       <Text style={styles.label}>Valor</Text>
       <View style={styles.inputContainer}>
         <TextInput
@@ -75,7 +75,7 @@ export default function WithdrawScreen() {
 
       {/* Botão de Confirmação */}
       <TouchableOpacity style={styles.confirmButton} onPress={handleWithdraw}>
-        <Text style={styles.confirmText}>Confirmar Saque</Text>
+        <Text style={styles.confirmText}>Confirmar Transferencia</Text>
       </TouchableOpacity>
     </View>
   );

@@ -1,10 +1,12 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
+
+const { width } = Dimensions.get("window");
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#121212",
-    padding: 20,
+    padding: 10,
     alignItems: "center",
   },
 
@@ -12,13 +14,6 @@ export default StyleSheet.create({
   profileHeader: {
     alignItems: "center",
     marginBottom: 20,
-  },
-  avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    borderWidth: 2,
-    borderColor: "#ffcc00",
   },
   username: {
     fontSize: 22,
@@ -28,38 +23,53 @@ export default StyleSheet.create({
   },
   balanceContainer: {
     backgroundColor: "#1e1e1e",
-    padding: 20,
-    borderRadius: 10,
+    padding: 10,
     alignItems: "center",
-    marginBottom: 20,
+    margin: 5,
+    marginBottom: 15,
+    marginTop: 30,
+  },
+  viewNotific: {
+    borderRadius: 50,
+    justifyContent: "center",
+    backgroundColor: "none",
   },
   balanceLabel: {
     color: "#bbb",
     fontSize: 16,
   },
   balanceAmount: {
-    fontSize: 28,
+    fontSize: 23,
     fontWeight: "bold",
     color: "#ffcc00",
   },
   assetItem: {
-    backgroundColor: "#1e1e1e",
+    flexDirection: "row",
+    alignItems: "center",
     padding: 15,
-    borderRadius: 8,
+    backgroundColor: "#1e1e1e",
     marginVertical: 5,
+    minWidth: "100%",
+    borderRadius: 10,
+    elevation: 3,
+  },
+  coinImage: {
+    width: 40,
+    height: 40,
+    marginRight: 10,
   },
   assetName: {
-    color: "#fff",
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "bold",
+    color: "#ffcc00",
   },
   assetBalance: {
-    color: "#bbb",
     fontSize: 14,
+    color: "#555",
   },
   assetPrice: {
-    color: "#ffcc00",
-    fontSize: 16,
+    fontSize: 14,
+    color: "#fff",
     fontWeight: "bold",
   },
 
@@ -148,32 +158,41 @@ export default StyleSheet.create({
   /* ================== BOTÕES ================== */
   actionButtons: {
     flexDirection: "row",
+    width: "100%",
+    padding: 0,
+    margin: 0,
     justifyContent: "space-between",
     marginTop: 20,
+    flexWrap: "wrap", // Empilha se necessário
   },
   button: {
     backgroundColor: "#ffcc00",
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingVertical: width < 400 ? 10 : 12,
+    paddingHorizontal: width < 400 ? 15 : 25,
     borderRadius: 8,
     alignItems: "center",
     flexDirection: "row",
+    minWidth: width < 400 ? "20%" : "30%",
+    justifyContent: "center",
   },
   buttonText: {
     fontSize: 16,
     fontWeight: "bold",
     color: "#121212",
     marginLeft: 8,
+    display: width < 400 ? "none" : "flex", // Esconde texto em telas pequenas
   },
   confirmButton: {
     marginTop: 20,
     backgroundColor: "#ffcc00",
-    paddingVertical: 12,
-    paddingHorizontal: 25,
+    paddingVertical: width < 400 ? 10 : 12,
+    paddingHorizontal: width < 400 ? 20 : 25,
     borderRadius: 10,
+    width: "100%",
+    alignItems: "center",
   },
   confirmText: {
-    fontSize: 16,
+    fontSize: width < 400 ? 14 : 16,
     fontWeight: "bold",
     color: "#121212",
   },
